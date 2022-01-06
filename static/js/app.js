@@ -28,3 +28,23 @@ function buildTable(data){
         });
     });
 }
+// create a function to filter the table with D3
+function handleClick(){
+    //create a variable to hold date data 
+    let date = d3.select("#datetime").property("value");
+    //create a default filter variable of the original table data 
+    let filteredData = tableData;
+    //filter data with an if statement for user selected date 
+    //show only the rows where teh date is equal to the date filter 
+    if(date){
+        filteredData = filteredData.filter(row => row.datetime === date);
+    };
+    //build a table based on filtered date- if no date was entered, OG table is given
+    buildTable(filteredData);
+}
+
+//use D3 to listen for button click and apply filter 
+d3.selectAll("#filter-btn").on("click", handleClick);
+
+//call the original table so it loads when user opens webpage 
+buildTable(tableData);
