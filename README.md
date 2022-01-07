@@ -13,6 +13,7 @@ For this assignment, we were asked to create an interactive webpage that display
 #### Software :
 	- Python 7.22.0
 	- VS Code 1.62.1
+### Visit https://kellykindla.github.io/ to use the interactive website 
 	
 ## Results 
 The end result of our JavaScript and HTML code is an interactive webpage displaying UFO sighting data. When first opening the webpage, you will first see a “UFO Sightings” link that can be used to reset any filters the user applies. After clicking this link, you are simply brought back to this main page. 
